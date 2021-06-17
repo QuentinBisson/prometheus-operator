@@ -1373,6 +1373,10 @@ func configureHTTPConfigInStore(ctx context.Context, httpConfig *monitoringv1alp
 		}
 	}
 
+	if err = store.AddAuthorization(ctx, namespace, httpConfig.Authorization, key); err != nil {
+		return err
+	}
+
 	if err = store.AddBasicAuth(ctx, namespace, httpConfig.BasicAuth, key); err != nil {
 		return err
 	}
