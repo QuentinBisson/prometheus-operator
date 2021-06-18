@@ -16,6 +16,7 @@ package v1
 
 import (
 	"fmt"
+
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -1040,7 +1041,7 @@ type ProberSpec struct {
 }
 
 // Authorization allow an endpoint to authenticate by configuring the authentication token
-// More info: https://prometheus.io/docs/operating/configuration/#endpoints
+// More info: https://prometheus.io/docs/alerting/latest/configuration/#http_config
 // +k8s:openapi-gen=true
 type Authorization struct {
 	// The type of the token to use. Defaults to `Bearer`.
