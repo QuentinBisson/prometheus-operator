@@ -1040,7 +1040,7 @@ type ProberSpec struct {
 	ProxyURL string `json:"proxyUrl,omitempty"`
 }
 
-// Authorization allow an endpoint to authenticate by configuring the authentication token
+// Authorization allows an endpoint to authenticate by configuring the authentication token
 // More info: https://prometheus.io/docs/alerting/latest/configuration/#http_config
 // +k8s:openapi-gen=true
 type Authorization struct {
