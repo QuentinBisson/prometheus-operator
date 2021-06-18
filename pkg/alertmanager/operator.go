@@ -1374,7 +1374,7 @@ func configureHTTPConfigInStore(ctx context.Context, httpConfig *monitoringv1alp
 		return errors.Wrap(err, "failed to parse alertmanager version")
 	}
 
-	if version.GTE(semver.MustParse("0.22.0")) && httpConfig.Authorization != nil {
+	if version.LT(semver.MustParse("0.22.0")) && httpConfig.Authorization != nil {
 		return errors.Wrap(err, "Authorization is only supported for alertmanager versions greater than v0.22+")
 	}
 
